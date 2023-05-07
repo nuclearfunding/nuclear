@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  backend:
+    build: ./nuclearBE
+    ports:
+      - "8080:5000"
+    volumes:
+      - type: bind
+        source: ./nuclearBE
+        target: /src
+    restart: always
