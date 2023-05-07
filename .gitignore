@@ -1,1 +1,3 @@
 nuclearBE/secrets.json
+*.log
+.idea/
