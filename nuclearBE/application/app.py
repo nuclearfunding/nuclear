@@ -2,9 +2,11 @@ from flask import json, Flask, request
 from loguru import logger
 
 from application.routes.user import user_api
+from application.routes.organization import organization_api
 
 app = Flask(__name__)
 app.register_blueprint(user_api)
+app.register_blueprint(organization_api)
 
 # configure logger
 logger.add("job.log", format="{time} - {message}")
